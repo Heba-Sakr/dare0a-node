@@ -1,0 +1,30 @@
+From 26bde592943f570ea34d7ddd7d5366be2d5ff0e7 Mon Sep 17 00:00:00 2001
+From: Heba Ali <85513159+Heba-Sakr@users.noreply.github.com>
+Date: Wed, 18 Dec 2024 20:40:51 +0100
+Subject: [PATCH] Fix greet function in Person class
+
+---
+ lib/assignment.js | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/lib/assignment.js b/lib/assignment.js
+index 55f31f4..2bb5b40 100644
+--- a/lib/assignment.js
++++ b/lib/assignment.js
+@@ -1,11 +1,9 @@
+ function Person(name) {
+-
+   this.name = name;
+ 
+   this.greet = function(other_name) {
+-    return "Hi " + other_name + ", my name is " + name();
+-  }
+-
++    return "Hi " + other_name + ", my name is " + this.name;
++  };
+ }
+ 
+ module.exports = Person;
+-- 
+2.42.0.windows.2
+
